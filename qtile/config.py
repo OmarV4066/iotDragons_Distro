@@ -68,6 +68,9 @@ keys = [
     Key([mod], "s", lazy.spawn("scrot")), #CAPTURA DE PANTALLA
     Key([mod], "e", lazy.spawn("thunar")), #CEXPLORADOR DE ARCHIVOS
 
+    #APAGAR LA COMPUTADORA
+    Key([mod, "control"], "s", lazy.spawn("shutdown now"), desc="Apagar el equipo"),
+
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -95,9 +98,11 @@ keys = [
 
     #MENU DE ROFI(GESTOR AUXILIAR MOD + M)
     #MENU
-    Key([mod], "m", lazy.spawn("rofi -show run")),
+    Key([mod], "m", lazy.spawn("rofi -show drun")),
     #Navegacion 
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    #TEMAS EN CONGIF.RASI PARA ROFI
+    #slate, onedark, sidetab
 
     # Volume
     Key([], "XF86AudioLowerVolume", lazy.spawn(
